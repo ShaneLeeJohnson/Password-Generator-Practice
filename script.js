@@ -18,6 +18,36 @@ const generatePassword = function () {
   const includeNums = confirm("Include numbers?");
   const includeSymbols = confirm("Include symbols?");
 
+  if (includeLowercase) {
+    passwordChar += lowercaseLetters;
+  }
+
+  if (includeUppercase) {
+    passwordChar += uppercaseLetters;
+  }
+
+  if (includeNums) {
+    passwordChar += numbers;
+  }
+
+  if (includeSymbols) {
+    passwordChar += symbols;
+  }
+
+  if (passwordChar === '') {
+    alert("At least one character type must be chosen");
+    return;
+  }
+
+  let password = '';
+
+  for (let i = 0; i < passwordLength; i++) {
+    let char = Math.floor(Math.random() * passwordChar.length);
+    password += passwordChar[char];
+  }
+
+  return password;
+
 }
 
 // Get references to the #generate element
