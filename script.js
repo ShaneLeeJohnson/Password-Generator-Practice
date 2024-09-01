@@ -1,5 +1,13 @@
 // Assignment code here
+const generatePassword = function () {
+  let passwordChar = [];
 
+  const passwordLength = parseInt(prompt("Please choose a password length between 8 and 128 characters"));
+
+  if (passwordLength === NaN || passwordLength < 8 || passwordLength > 128) {
+    alert("Please choos a password length between 8 and 128 characters");
+  }
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
