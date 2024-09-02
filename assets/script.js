@@ -14,8 +14,8 @@ const generatePassword = function () {
   const passwordLength = parseInt(prompt("Please choose a password length between 8 and 128 characters"));
 
   // Validates that what the user entered is a number and is between 8 and 128
-  if (passwordLength === NaN || passwordLength < 8 || passwordLength > 128) {
-    alert("Please choos a password length between 8 and 128 characters");
+  if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
+    alert("Please choose a password length between 8 and 128 characters");
     return;
   }
 
